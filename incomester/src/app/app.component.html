@@ -1,0 +1,25 @@
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-left">
+    <!-- Could be a button or a <select> if you prefer -->
+    <button class="active-btn">Active</button>
+  </div>
+  <div class="topbar-right">
+    <button class="passive-btn">Passive</button>
+  </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="main-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <p>Sidebar content (min 200px / 20% wide)</p>
+  </aside>
+
+  <!-- The router-outlet for all main pages/components -->
+  <section class="router-content">
+    <app-hello-world></app-hello-world>
+    <app-income-displayer></app-income-displayer>
+    <router-outlet></router-outlet>
+  </section>
+</div>

@@ -1,0 +1,67 @@
+:host {
+    display: block; /* So that the host (app component) can size normally */
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    /* You can keep your existing color variables/gradients, e.g.:
+    --bright-blue: ...;
+    --electric-violet: ...;
+    --french-violet: ...;
+    ...
+    */
+  }
+  
+  /* Topbar styling */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--red-to-pink-to-purple-horizontal-gradient);
+    padding: 0.75rem 1rem;
+  }
+  
+  /* Just an example of button styling */
+  .active-btn,
+  .passive-btn {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .active-btn:hover {
+    background: color-mix(in srgb, white 15%, var(--electric-violet));
+  }
+  .passive-btn:hover {
+    background: color-mix(in srgb, white 15%, var(--hot-red));
+  }
+  
+  /* Layout container for sidebar + router-outlet */
+  .main-layout {
+    display: flex;
+    flex: 1; /* fill remaining vertical space below topbar */
+    height: calc(100vh - 50px); /* Or use 100% if the parent is sized properly */
+    overflow: hidden;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    min-width: 200px; /* ensures at least 200px */
+    width: 20%;       /* tries to use 20% of the container width */
+    background: var(--gray-400);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  /* Main router area */
+  .router-content {
+    flex: 1; /* fill the remaining width */
+    background: var(--gray-100, #f4f4f4); /* or any color you like */
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  

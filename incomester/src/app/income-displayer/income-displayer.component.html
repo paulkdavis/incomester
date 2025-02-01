@@ -1,0 +1,9 @@
+<div class="income-displayer">
+    <h2>Income Growth Projection</h2>
+    <ul>
+      <li *ngFor="let income of projectedIncome; let i = index">
+        Month {{ i + 1 }}: ${{ income | number: '1.0-0' }}
+      </li>
+    </ul>
+  </div>
+  
